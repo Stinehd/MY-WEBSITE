@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustrations</title>
+
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/gallery_v3.css">
+
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/showreel-videos.css">
+  <link rel="stylesheet" href="css/general.css">
+
+  <style> a:visited { color : black; } </style>
+
+
+</head>
+
+
+<body>
+
+
+  <div class="header" style="min-width: 600px;">
+    <div class="inner-header">
+        <div class="logo-container">
+
+          <div style="margin-left: 10px;"><a href="index.html"><h1>STINE HARBO</h1></a></div>
+       
+          <a href="index.html"><h2 style="margin-left: 10px;">ANIMATION & ILLUSTRATION</h2></a>
+
+        </div>  
+      
+      <ul class="navigation" >
+        <a href="index.html"><li>SHOWREELS</li></a> 
+        <a href="gallery_v3.html"><li>ILLUSTRATIONS</li></a>  
+        <a href="projects.html"><li>PROJECTS</li></a> 
+        <a href="personal-projects.html"><li>PERSONAL PROJECTS</li></a> 
+        <a href="about.html"><li>ABOUT</li></a> 
+               
+      </ul>
+    </div>
+  </div>
+
+
+<div class="gallery">
+
+
+
+    <div class="image-container">
+
+        <a href="images/flower.png" class="image ice-cream">
+            <img src="images/flower.png" alt="">
+        </a>
+        <a href="images/clover.jpg" class="image ice-cream">
+            <img src="images/clover.jpg" alt="">
+        </a>
+        <a href="images/Lupin.png" class="image ice-cream">
+            <img src="images/Lupin.png" alt="">
+        </a>
+        <a href="images/BG_COTL.jpg" class="image chocolate">
+            <img src="images/BG_COTL.jpg" alt="">
+        </a>
+
+
+    </div>
+
+</div>
+
+
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $('.buttons').click(function(){
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+        var filter = $(this).attr('data-filter')
+
+        if(filter == 'all'){
+            $('.image').show(400);
+        }else{
+            $('.image').not('.'+filter).hide(200);
+            $('.image').filter('.'+filter).show(400);
+        }
+
+    });
+
+    $('.gallery').magnificPopup({
+
+        delegate:'a',
+        type:'image',
+        gallery:{
+            enabled:true
+        }
+
+    });
+
+});
+
+</script>
+    
+</body>
+</html>
