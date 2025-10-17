@@ -1,0 +1,45 @@
+
+
+
+body{
+  height: 1200px; 
+}
+
+.flex-container-top {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.description-top {
+  width: 600px;
+  align-self: center;
+  background-color: white;
+  margin-left: 120px;
+}
+
+.profile-picture {
+  width: 260px;
+}
+
+.flex-container-bottom {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: white;
+}
+
+.row-one {
+  width: 400px;
+  background-color: white;
+}
+
+.row-two{
+  width: 600px;
+  background-color: white;
+}
+
